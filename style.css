@@ -1,0 +1,369 @@
+/** GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: whitesmoke;
+  font-family: caslon-antique, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+}
+
+/*? FONTS */
+@font-face {
+  font-family: caslon-antique;
+  src: url(./fonts/CaslonAntique.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: blade-runner;
+  src: url(./fonts/BLADRMF_.TTF);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 175px;
+  background-image: url(https://res.cloudinary.com/dd0zwrz0b/image/upload/v1719829932/Jason%20english%20lessons/sci-fi-background_nd1uaw.png);
+  background-size: 100%;
+  background-position: content;
+  background-repeat: no-repeat;
+  color: rgb(239, 240, 234);
+  justify-items: center;
+  align-items: center;
+  border-bottom: 5px solid #e3ba68;
+}
+
+header > img {
+  width: 150px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  flex-grow: 0;
+}
+
+header > img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+h1 {
+  text-shadow: 2px 2px 10px rgba(5, 5, 5, 0.891);
+  font-family: blade-runner, caslon-antique, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  font-size: 30px;
+  transition: all 0.5s;
+  max-width: 200px;
+}
+
+header > h1:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+header > h1 > span {
+  color: coral;
+  font-family: blade-runner, caslon-antique, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  font-size: 30px;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+  text-align: center;
+  background-image: url(https://res.cloudinary.com/dd0zwrz0b/image/upload/v1719956659/Jason%20english%20lessons/side-wave_background_rjdefx.svg);
+}
+
+main span {
+  color: coral;
+}
+
+main .title {
+  font-family: blade-runner, caslon-antique, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  color: coral;
+}
+
+i {
+  font-family: blade-runner, caslon-antique, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  color: whitesmoke;
+}
+
+.flex-container {
+  display: flex;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 20px;
+  background-image: url(https://res.cloudinary.com/dd0zwrz0b/image/upload/v1719933073/Jason%20english%20lessons/space_background_nlg2nc.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px 0px #e3ba68;
+  max-width: 20em;
+  max-height: 900px;
+  flex-direction: column;
+  justify-content: start;
+  align-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+}
+
+main img {
+  width: 100px;
+  border-radius: 5px;
+  border: 3px solid whitesmoke;
+  transition: all 0.5s;
+}
+
+main img:hover {
+  transform: scale(2);
+  cursor: pointer;
+}
+
+main .map-flag {
+  width: 40px;
+  border: none;
+}
+
+h2.title {
+  font-size: 25px;
+  text-shadow: 2px 2px 5px #787676;
+}
+
+.nationality {
+  display: flex;
+  align-items: center;
+}
+
+label {
+  font-family: blade-runner, caslon-antique, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  font-size: 14px;
+  text-shadow: 2px 2px 5px #787676;
+}
+
+label span {
+  font-family: caslon-antique, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield; /* Firefox */
+  -webkit-appearance: none; /* Safari y Chrome */
+  appearance: none;
+  margin: 0; /* Elimina margen adicional en iOS */
+  color: whitesmoke;
+  text-shadow: 2px 2px 5px #787676;
+  box-shadow: 2px 2px 5px 0px #787676;
+  text-align: center;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  border: 2px solid coral;
+  background: transparent;
+  font-size: 20px;
+}
+
+/* Estilos para eliminar flechas en Chrome, Safari, Edge y Opera */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']:focus {
+  outline: none;
+  background-color: #ff7f50;
+  border-color: #f5f5f5;
+}
+
+#digit-form {
+  display: flex;
+  gap: 10px;
+}
+
+#jj-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+#jj-scores {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+#last-digit1,
+#last-digit2,
+#last-digit3,
+#last-digit4,
+#last-digit5,
+#last-digit6,
+#last-digit7,
+#last-digit8,
+#last-digit9,
+#last-digit10,
+#last-digit11,
+#last-digit12,
+#last-digit13,
+#last-digit14,
+#last-digit15,
+#last-digit16,
+#last-digit17,
+#last-digit18,
+#last-digit19,
+#last-digit20,
+#last-digit21,
+#last-digit22,
+#last-digit23,
+#last-digit24,
+#last-digit25,
+#last-digit26,
+#last-digit27,
+#last-digit28,
+#last-digit29,
+#last-digit30,
+#last-digit31,
+#last-digit32,
+#last-digit33,
+#last-digit34,
+#last-digit35,
+#last-digit36,
+#last-digit37,
+#last-digit38,
+#last-digit39,
+#last-digit40,
+#last-digit41,
+#last-digit42,
+#last-digit43,
+#last-digit44,
+#last-digit45,
+#last-digit46,
+#last-digit47,
+#last-digit48,
+#last-digit49,
+#last-digit50,
+#last-digit51,
+#last-digit52,
+#last-digit53,
+#last-digit54,
+#last-digit55,
+#last-digit56,
+#last-digit57,
+#last-digit58,
+#last-digit59,
+#last-digit60,
+#last-digit61,
+#last-digit62,
+#last-digit63,
+#last-digit64,
+#last-digit65,
+#last-digit66,
+#last-digit67,
+#last-digit68,
+#last-digit69,
+#last-digit70,
+#last-digit71,
+#last-digit72,
+#last-digit73,
+#last-digit74,
+#last-digit75,
+#last-digit76,
+#last-digit77,
+#last-digit78,
+#last-digit79,
+#last-digit80,
+#last-digit81,
+#last-digit82,
+#last-digit83,
+#last-digit84,
+#last-digit85,
+#last-digit86,
+#last-digit87,
+#last-digit88,
+#last-digit89,
+#last-digit90,
+#last-digit91,
+#last-digit92,
+#last-digit93,
+#last-digit94,
+#last-digit95,
+#last-digit96,
+#last-digit97,
+#last-digit98,
+#last-digit99,
+#last-digit100,
+#last-digit101,
+#last-digit102,
+#last-digit103,
+#last-digit104,
+#last-digit105,
+#last-digit106,
+#last-digit107,
+#last-digit108,
+#last-digit109,
+#last-digit110,
+#last-digit111,
+#last-digit112,
+#last-digit113,
+#last-digit114,
+#last-digit115,
+#last-digit116,
+#last-digit117,
+#last-digit118,
+#last-digit119,
+#last-digit120,
+#last-digit121,
+#last-digit122,
+#last-digit123,
+#last-digit124,
+#last-digit125,
+#last-digit126,
+#last-digit127,
+#last-digit128,
+#last-digit129,
+#last-digit130,
+#last-digit131,
+#last-digit132,
+#last-digit133,
+#last-digit134,
+#last-digit135,
+#last-digit136,
+#last-digit137,
+#last-digit138,
+#last-digit139,
+#last-digit140,
+#last-digit141,
+#last-digit142,
+#last-digit143,
+#last-digit144,
+#last-digit145,
+#last-digit146,
+#last-digit147,
+#last-digit148 {
+  display: none;
+}
